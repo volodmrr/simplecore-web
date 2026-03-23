@@ -1,17 +1,18 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { Mail, MapPin, Phone, Send, CheckCircle } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle } from "lucide-react";
 import clsx from "clsx";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "hello@simplecore.io" },
-  { icon: Phone, label: "Phone", value: "+1 (800) 555-0100" },
-  { icon: MapPin, label: "Location", value: "San Francisco, CA" },
+  { icon: MapPin, label: "Location", value: "Kyiv, Ukraine" },
 ];
 
 export default function Contact() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -48,7 +49,10 @@ export default function Contact() {
     "w-full px-4 py-3 rounded-xl bg-brand-bg border border-brand-border text-brand-text placeholder:text-brand-muted text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent/60 focus:border-brand-accent transition-all";
 
   return (
-    <section id="contact" className="py-24 bg-brand-bg relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-24 bg-brand-bg relative overflow-hidden"
+    >
       {/* Background glow */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -78,8 +82,9 @@ export default function Contact() {
             </span>
           </h2>
           <p className="text-brand-muted text-lg leading-relaxed">
-            Whether you need to fill a single role or build an entire department,
-            we&apos;re ready to help. Reach out and let&apos;s get started.
+            Whether you need to fill a single role or build an entire
+            department, we&apos;re ready to help. Reach out and let&apos;s get
+            started.
           </p>
         </div>
 
@@ -100,7 +105,9 @@ export default function Contact() {
                       <p className="text-brand-muted text-xs uppercase tracking-wide mb-0.5">
                         {label}
                       </p>
-                      <p className="text-brand-text text-sm font-medium">{value}</p>
+                      <p className="text-brand-text text-sm font-medium">
+                        {value}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -113,8 +120,8 @@ export default function Contact() {
               </p>
               <p className="text-brand-muted text-sm">
                 We respond to all inquiries within{" "}
-                <span className="text-brand-glow font-medium">24 hours</span>{" "}
-                on business days.
+                <span className="text-brand-glow font-medium">24 hours</span> on
+                business days.
               </p>
             </div>
           </div>
@@ -214,7 +221,8 @@ export default function Contact() {
 
                   {status === "error" && (
                     <p className="text-red-400 text-sm text-center">
-                      Something went wrong. Please try again or email us directly.
+                      Something went wrong. Please try again or email us
+                      directly.
                     </p>
                   )}
 
@@ -225,7 +233,7 @@ export default function Contact() {
                       "flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-white text-sm transition-all duration-200",
                       status === "loading"
                         ? "bg-brand-accent/60 cursor-not-allowed"
-                        : "bg-brand-accent hover:bg-brand-glow glow-accent hover:scale-[1.02]"
+                        : "bg-brand-accent hover:bg-brand-glow glow-accent hover:scale-[1.02]",
                     )}
                   >
                     {status === "loading" ? (
