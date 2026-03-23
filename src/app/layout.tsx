@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: "Simplecore | HR Solutions & Talent Acquisition",
   description:
     "Simplecore delivers recruitment, executive search, and HR consulting services that help businesses build high-performing teams.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
