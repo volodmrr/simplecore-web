@@ -1,9 +1,9 @@
-import { ArrowRight, Users, TrendingUp, Award } from "lucide-react";
+import { ArrowRight, Clock, Shield, Handshake } from "lucide-react";
 
 const stats = [
-  { icon: Users, value: "500+", label: "Placements" },
-  { icon: TrendingUp, value: "98%", label: "Retention Rate" },
-  { icon: Award, value: "2+", label: "Years Experience" },
+  { icon: Clock, value: "24hr", label: "Response Time" },
+  { icon: Handshake, value: "Tailored", label: "HR Solutions" },
+  { icon: Shield, value: "100%", label: "Confidential" },
 ];
 
 export default function Hero() {
